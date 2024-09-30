@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    margin-top: -10px;
+}
+
+.logo img {
+    max-width: 20%; 
+    height: auto;
+}
+
+.content-wrapper {
+    display: flex; 
+    flex: 1; 
+}
+
+.SideBar {
+    width: 21%;
+    background: linear-gradient(180deg, #3C3181 0%, #321F59 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-top-right-radius: 80px; 
+    height: calc(100vh - 20px); .main-content {
+    flex: 1; /* Take the remaining width beside the sidebar */
+    padding: 20px; /* Add some padding */
+    background-color: #f9f9f9; /* Optional background color */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+}
+
+.navlinks {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navlinks li {
+    margin-left: 40px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center; 
+    font-size: large;
+}
+
+.nav-icon {
+    width: 50%; 
+    height: auto; 
+    margin-left: -30px;
+}
+
+.userinfo {
+    display: flex;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.user-avatar {
+    width: 50%;
+    height: auto;
+}
+
+.userAcc {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: white; 
+}
+
+.userAcc span {
+    margin-left: -27px;
+}
+
+
+/* main content */
+
+.main-content {
+    margin-left: 100px;
+    margin-top: -50px;
+}
+
+
+h1 {
+    margin-bottom: 20px; 
+    color: #3C3181; 
+}
+
+.newGym-form {
+    background: transparent; 
+    border-radius: 5px; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column;
+    max-width: 400px; 
+}
+
+input[type="text"] {
+    padding: 13px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #ffffff; 
+}
+
+.button-container {
+    display: flex; 
+    justify-content: flex-start; 
+}
+
+button {
+    padding: 10px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;  
+    background-color: white;
+    color: #666666; 
+    max-width: 20%;
+}
+
+.button-icon {
+    width: 20px; 
+    height: auto;
+    margin-right: 5px;
+    vertical-align: middle; 
+}
+
+button[type="submit"] {
+    background-color: #3C3181; 
+    color: white; 
+    cursor: pointer;
+    padding: 8px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    min-width: 120px; 
+    margin-left: 80px;
+}
+
+button[type="button"] {
+    background-color: #B0B0B0; 
+    color: white; 
+    cursor: pointer; 
+    border: none;  
+    border-radius: 4px; 
+    min-width: 120px; 
+    margin-left: 40px; 
+}
+
+button img {
+    width: 18%;
+}
+
+button:hover {
+    opacity: 0.9; 
+}
+
+button:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}

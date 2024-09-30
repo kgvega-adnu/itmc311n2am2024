@@ -1,0 +1,166 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+/* Container holding both sections */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+/* Left Side - Login Form */
+.login-form {
+    width: 50%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin-top: -70px;
+}
+
+.login-form .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: -60px;
+    margin-left: -80px;
+}
+
+.login-form .logo img {
+    width: 60%;
+}
+
+.login-form h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.login-form h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.login-form h5 {
+    margin-bottom: 13px;
+    font-size: smaller;
+    color: rgba(128, 128, 128, 0.534);
+    font-weight: normal;
+}
+.login-form input {
+    width: 80%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 50px;
+    background-color: #f0f0f381;
+    font-size: 12px;
+
+}
+
+.login-form input:hover {
+    background-color: #ffffff;
+}
+
+.login-form button {
+    width: 80%;
+    padding: 8px;
+    background: linear-gradient(90deg, #3C3181 0%, #321F59 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.login-form button:hover {
+    background-color: #4917ad;
+}
+
+.login-form p {
+    text-align: left;
+    margin-top: 10px;
+    color:rgba(128, 128, 128, 0.534);
+    font-size: x-small;
+}
+
+.login-form a {
+    color: #3e1a85;
+    text-decoration: none;
+}
+
+/* right side */
+
+.welcome-section {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background: url('../../public/images/rightPanel.png') no-repeat center center;
+    background-size: 300%;
+}
+
+.welcome-message {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-message h3 {
+    font-size: 30px;
+    margin-bottom: -140px;
+    
+}
+
+.welcome-message p {
+    font-size: 15px;    
+    margin-top: -140px;
+}
+
+.welcome-message img {
+    max-width: 70%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* fade in fx */
+.welcome-message {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}

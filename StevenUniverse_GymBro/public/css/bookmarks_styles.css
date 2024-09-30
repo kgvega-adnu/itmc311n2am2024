@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    margin-top: -10px;
+}
+
+.logo img {
+    max-width: 20%; 
+    height: auto;
+}
+
+.layout {
+    display: flex; /* Allows for two columns */
+    flex: 1; /* Takes the remaining height */
+}
+
+.SideBar {
+    width: 21%;
+    background: linear-gradient(180deg, #3C3181 0%, #321F59 100%);
+    color: white;
+    padding: 20px;
+    border-top-right-radius: 80px; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.navlinks {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navlinks li {
+    margin-left: 40px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center; 
+    font-size: large;
+}
+
+.nav-icon {
+    width: 50%; 
+    height: auto; 
+    margin-left: -30px;
+}
+
+.userinfo {
+    display: flex;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.user-avatar {
+    width: 50%;
+    height: auto;
+}
+
+.userAcc {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: white; 
+}
+
+.userAcc span {
+    margin-left: -27px;
+}
+
+/* page main content */
+.main-content {
+    margin-left: 3%; 
+    margin-top: 70px;
+    padding: 20px;
+    overflow-y: auto; 
+    height: calc(100vh - 220px);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+.top-part {
+    position: fixed; 
+    height: 150px;
+    top: 80px;
+    z-index: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    background-color: #ffffff; 
+    z-index: 10; 
+    width: 100%; 
+    padding: 10px; 
+}
+
+.top-part h1 {
+    font-size: 36px; 
+    color: #3C3181; 
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-gym-btn {
+    display: inline-flex;  
+    align-items: center;  
+    background: linear-gradient(90deg, #3C3181 0%, #321F59 100%);
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;  
+    margin-left: 310px;
+}
+
+.add-gym-btn:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.add-gym-btn img {
+    width: 25px;   
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+/* gyms */
+
+.gym-and-branches {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/* gym top part */
+.gyms-top-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: linear-gradient(90deg, #3C3181 0%, #321F59 100%);
+    padding: 15px;
+    border-radius: 10px;
+    width: 750px;
+    box-sizing: border-box; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gym-box {
+    display: flex;
+    flex-direction: column; 
+}
+
+.gym-name {
+    font-size: 18px;
+    color: #ffffff;
+    flex-grow: 1; 
+    margin-right: 10px;
+}
+
+.add-branch-btn {
+    padding: 5px 10px;
+    background: white;
+    color: #321F59;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 10px; 
+}
+
+.add-branch-btn:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.add-icon {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.edit-icon {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
+
+.edit-icon:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.add-branch-btn:hover, .edit-icon:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+/* branch details */
+.branch-list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px; 
+}
+
+.branch-item {
+    border: 2px solid #3C3181;  
+    border-top: none; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 90%;
+    margin-left: 37px;
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 5px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    overflow: hidden;
+}
+
+.gym-img img {
+    width: 200px; 
+    height: auto; 
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-bottom: -14px;
+}
+
+.branch-details {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 20px; 
+    flex: 1; 
+    max-height: 60px; 
+    max-width: 300px;
+    overflow: hidden; 
+}
+
+.branch-location {
+    font-size: 16px;
+    color: #3C3181; 
+}
+
+.branch-name {
+    font-size: 14px; 
+    color: #666666; 
+}
+
+/* actions */
+.branch-actions {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.top-actions {
+    display: flex; 
+    align-items: center; 
+} 
+
+img[alt="insight-icon"] {
+    margin-right: -60px;
+}
+
+.action-icon {
+    width: 100px;
+    height: auto; 
+    cursor: pointer; 
+    margin-right: -30px;
+}
+
+.view-logs {
+    background-color: transparent; 
+    border: none; 
+    color: #3C3181; 
+    padding: 5px 10px; 
+    border-radius: 5px;
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 5px;
+}
+
+.view-logs img {
+    width: 16px; 
+    margin-left: 5px; 
+    cursor: pointer;
+}
+
