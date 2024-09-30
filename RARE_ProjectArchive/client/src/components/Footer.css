@@ -1,0 +1,32 @@
+a, span{
+    color: var(--fnt-clr-gray);
+}
+
+span{
+    font-size: 0.75rem;
+}
+.Footer{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-options a{
+    margin: 0 2rem;
+    transition: all 0.5s;
+}
+
+.footer-options a:hover{
+    color: var(--clr-yellow-primary);
+    transition: all 0.5s;
+}
+
+.footer-information{
+    background-color: var(--footer-bg-clr);
+
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    padding: 0.25rem 0;
+    min-width: 100%;
+}

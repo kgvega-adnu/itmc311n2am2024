@@ -1,0 +1,53 @@
+.project-options {
+    padding: 1.25rem; 
+    border-radius: 0.625rem;
+    border: 1px solid var(--clr-gray-secondary);
+    max-width: 15.75rem; 
+    height: fit-content;
+  }
+  
+  .project-options span {
+    font-size: 0.875rem;   
+    color: var(--fnt-clr-secondary);   
+    margin-bottom: 0.5rem; 
+  }
+  
+  .buttons {
+    margin-top: 1rem; 
+  }
+  
+  
+  .download-button, .cite-button {
+    width: 100%;
+    margin-top: 0.625rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--fnt-clr-secondary);
+    font-size: 1rem;
+    font-weight: medium;
+    border: 1.5px var(--fnt-clr-secondary) solid;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    transition: all 0.5s;
+  
+  }
+  
+  .button-icon {
+    width: 1rem;  
+    height: 1rem;
+    margin-right: 0.5rem; 
+    vertical-align: middle; 
+  }
+  
+  .download-button:hover , .cite-button:hover {
+    background-color: var(--clr-yellow-primary); 
+    color: white; 
+    border-color: var(--clr-yellow-primary); 
+      transition: all 0.5s;
+  }
+  
+  .download-button:hover .button-icon,
+  .cite-button:hover .button-icon {
+      filter: brightness(0) invert(1); 
+  }
+  

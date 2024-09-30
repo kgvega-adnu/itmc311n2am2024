@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Grifter;
+  src: url('../fonts/grifterbold.otf');
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+   /* Disable the highlight */
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+:root {
+  
+  /* Background and font colors */
+  --bg-clr: #FCFCFC;
+  --fnt-clr-primary: #202124;
+  --fnt-clr-secondary: #575858;
+  --fnt-clr-gray: #999CA4;
+
+
+  /* Other colors */
+  --clr-yellow-primary: #E7A90A;
+  --clr-gray-secondary: #AFB5BF;
+
+  /* Other specifications */
+  font-family: "Inter", sans-serif;
+  --border-radius: 8px;
+
+  /* Apply transition globally */
+  transition: all 0.5s ease, color 0.5s ease;
+
+  /* Footer */
+  --footer-bg-clr: #e9e9e9;
+  
+}
+
+[data-theme="dark"] {
+  --bg-clr: #202124;
+  --fnt-clr-primary: #FFFFFF;
+  --fnt-clr-secondary: #f1f1f1;
+  --clr-gray-secondary: #AFB5BF;
+  --footer-bg-clr: #1B1C1E;
+}
+
+/* Transitions */
+body{
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+  
+}
