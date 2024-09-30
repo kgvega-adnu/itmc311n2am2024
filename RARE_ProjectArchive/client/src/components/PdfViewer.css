@@ -1,0 +1,44 @@
+/* PDF VIEWER */
+.pdf-view {
+    position: relative;
+    overflow-y: scroll; 
+    max-height: 600px;  
+    border: 1.5px var(--clr-gray-secondary) solid;
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem 1.25rem 1.25rem;
+  }
+  
+  .pdf-view .page-number {
+    position: sticky; 
+    top: 1rem; 
+    font-weight: bold; 
+    text-align: center; 
+    background-color: #f1f1f1; 
+    z-index: 10; 
+    padding: 0.25rem; 
+    border-radius: 0.25rem;
+  }
+  
+  .pdf-view .pdf-page {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 1rem;
+    width: auto;
+    max-width: 100%;
+  }
+  
+  .pdf-view::-webkit-scrollbar {
+    width: 0.8rem; 
+  }
+  
+  .pdf-view::-webkit-scrollbar-thumb {
+    background: #AFB5BF; 
+    border-radius: 0.275rem; 
+  }
+  
+  .pdf-view::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius:  0.275rem; 
+  }
+
+  

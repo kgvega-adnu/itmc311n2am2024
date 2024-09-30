@@ -1,0 +1,97 @@
+    .project-settings{
+        padding: 1.25rem; 
+        border-radius: 0.625rem;
+        border: 1px solid var(--clr-gray-secondary);
+        max-width: 15.75rem; 
+        height: fit-content;
+    }
+    
+    .project-settings span {
+        display: block;
+        font-size: 0.875rem;   
+        color: var(--fnt-clr-secondary);   
+        margin-bottom: 0.2rem;
+    }
+    
+    .project-settings span strong {
+        font-size: 0.875rem; 
+        color: var(--fnt-clr-primary)
+    }
+  
+
+    /* HEADER */
+
+    .project-settings .setting-header {
+        display: flex;
+        align-items: center; 
+        margin-bottom: 1.25rem;
+    }
+
+    .project-settings .setting-header strong {
+        color: var(--fnt-clr-secondary);
+        font-weight: 600;
+    }
+
+    .setting-icon {
+        margin-right: 0.25rem; 
+    }
+
+    /* ALERT */
+
+    .project-settings .alert-message {
+        display: flex;
+        align-items: center;
+        background-color: #FFF2E1;
+        border-left: 12px solid var(--clr-yellow-primary);
+        padding: 0.5rem 0.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: var(--border-radius);
+    }
+
+    .project-settings .alert-message .alert-text {
+        color: var(--clr-yellow-primary); 
+        font-size: 0.625rem; 
+        margin-top: 0.2rem;
+        margin-left: 0.5rem;
+    }
+
+    
+    /* BUTTONS */
+
+    .project-settings .delete-button, .project-settings .update-button {
+    width: 100%;
+    margin-top: 0.75rem;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: medium;
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    transition: all 0.5s;
+    }
+
+    .project-settings .update-button {
+    color: var(--fnt-clr-primary);
+    border: 1.5px var(--fnt-clr-secondary) solid;
+    margin-bottom: 1.5rem;
+    }
+
+    .project-settings .delete-button {
+    color:#DA5552;
+    border: 1.5px #DA5552 solid;
+    margin-bottom: 0.5rem;
+    } 
+
+    .project-settings .delete-button:hover {
+        background-color: #DA5552;; 
+        color: white; 
+        border-color: #DA5552;; 
+            transition: all 0.5s;
+    }
+
+    .project-settings .update-button:hover {
+    background-color: var(--clr-yellow-primary); 
+    color: white; 
+    border-color: var(--clr-yellow-primary); 
+        transition: all 0.5s;
+    }

@@ -1,0 +1,30 @@
+
+body{
+  background-color: var(--bg-clr);
+  color: var(--fnt-clr-primary);
+}
+
+.content{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#no-of-projects{
+  font-weight: 700;
+}
+
+.archiveSearch-img{
+  margin-bottom: 1rem;
+}
+.search-page-wrapper{
+  align-self: center;
+  margin: auto 0;
+  width: 70rem;
+}
+
+.subheader-wrapper{
+  padding: 0.5rem 0;
+}
+

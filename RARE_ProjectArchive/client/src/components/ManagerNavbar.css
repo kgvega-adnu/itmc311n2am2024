@@ -1,0 +1,52 @@
+
+a{
+    text-decoration: none;
+}
+
+.manageButton{
+    color: var(--fnt-clr-secondary);
+    transition: all 0.5s;
+}
+
+.manageButton:hover{
+    color: var(--clr-yellow-primary);
+    transition: all 0.5s;
+}
+
+.userprof{
+    color: var(--fnt-clr-secondary);
+    transition: all 0.5s;
+}
+
+.userprof:hover{
+    color: var(--clr-yellow-primary);
+    transition: all 0.5s;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.nav div{
+    align-self: center;
+}
+
+
+.user-options{
+    display: flex;
+    align-items: center;
+}
+
+.nav div a span{
+    color: var(--fnt-clr-secondary);
+}
+
+.nav div a{
+    margin: 0 1rem;
+}
+
+.ThemeToggle{
+    margin: 0 0.50rem;
+}

@@ -1,0 +1,51 @@
+/* PROJECT CONTENT WRAPPER */
+
+.display-project-wrapper{
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.display-project-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  padding-top: 2rem;
+  margin-left: 13rem;
+  margin-right: 5rem;
+  gap: 1rem;
+}
+
+/* BACK LINK */
+
+.back-link {
+  text-decoration: none;
+  color: var(--fnt-clr-secondary);
+  font-size: 0.9rem;
+  padding: 3rem;
+  margin: auto 13rem;
+
+}
+
+.back-link .back-icon {
+  margin-right: 0.5rem;  
+}
+
+.back-link:hover {
+  color: var(--clr-yellow-primary);
+}
+
+.back-link:hover .back-icon {
+  color: var(--clr-yellow-primary);
+}
+
+/* PROJECT CONTENT */
+
+.project-details {
+  max-width: 700px; 
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--fnt-clr-secondary);
+}

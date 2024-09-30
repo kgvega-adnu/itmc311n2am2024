@@ -1,0 +1,31 @@
+.result-wrapper{
+    margin: 2rem 10rem;
+}
+
+.result-title{
+    color: var(--fnt-clr-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 2rem 0;
+}
+
+.proponent-date-wrapper{
+    display: flex;
+    margin-bottom: 0.25rem;
+}
+
+.proponent, .date{
+    color: #545760;
+    font-weight: 500;
+    
+}
+.divider{
+    margin: 0 0.25rem;
+    
+}
+
+.abstract-snippet{
+    color: var(--fnt-clr-primary);
+    margin-right: 5rem;
+    
+}

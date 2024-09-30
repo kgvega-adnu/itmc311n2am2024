@@ -1,0 +1,59 @@
+
+a{
+    text-decoration: none;
+}
+.browseButton{
+    color: var(--fnt-clr-secondary);
+    transition: all 0.5s;
+}
+.browseButton:hover{
+    color: var(--clr-yellow-primary);
+    transition: all 0.5s;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.nav div{
+    align-self: center;
+}
+
+
+.user-options{
+    display: flex;
+    align-items: center;
+}
+
+.nav div a span{
+    color: var(--fnt-clr-secondary);
+}
+
+.nav div a{
+    margin: 0 1rem;
+}
+
+.ThemeToggle{
+    margin: 0 0.50rem;
+}
+
+
+.loginButton{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--fnt-clr-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1.5px var(--fnt-clr-secondary) solid;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    transition: all 0.5s;
+
+}
+
+.loginButton:hover{
+    border: 1.5px var(--clr-yellow-primary) solid;
+    color: var(--clr-yellow-primary);
+    transition: all 0.5s;
+}

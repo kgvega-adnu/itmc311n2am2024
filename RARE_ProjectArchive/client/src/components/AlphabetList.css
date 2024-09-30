@@ -1,0 +1,21 @@
+.alphabet-list {
+    position: sticky;
+    display: flex;
+    top: 20px; 
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .alphabet-list a {
+    text-decoration: none;
+    font-size: 0.80rem;
+    color: var(--fnt-clr-primary);
+    margin-bottom: 7px;
+    cursor: pointer;
+  }
+  
+  .alphabet-list a:hover {
+    color: var(--clr-yellow-primary);
+    transform: scale(1.5);
+  }
+  
