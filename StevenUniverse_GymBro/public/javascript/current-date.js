@@ -16,7 +16,8 @@
 // Function to display the current date in specified elements
 function displayCurrentDate() {
     const dateElements = [
-        document.getElementById('current-date')
+        document.getElementById('current-date'),
+        document.getElementById('current-date1')
     ];
 
     dateElements.forEach((dateElement) => {

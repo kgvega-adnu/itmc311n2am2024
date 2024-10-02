@@ -38,7 +38,7 @@ body {
 }
 
 .SideBar {
-    width: 21%;
+    width: 27%;
     background: linear-gradient(180deg, #3C3181 0%, #321F59 100%);
     color: white;
     padding: 20px;
@@ -98,17 +98,13 @@ body {
     margin-left: 3%; 
     margin-top: 70px;
     padding: 20px;
-    overflow-y: auto; 
     height: calc(100vh - 220px);
     position: relative;
     box-sizing: border-box;
     width: 100%;
 }
 
-.main-content::-webkit-scrollbar {
-    display: none;
-}
-
+/* page header */
 .top-part {
     position: fixed; 
     height: 150px;
@@ -167,181 +163,8 @@ body {
     vertical-align: middle; 
 }
 
-/* Table */
-/* Tabs */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    display: flex;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.logo {
-    width: 100%;
-    display: flex;
-    margin-top: -10px;
-}
-
-.logo img {
-    max-width: 20%;
-    height: auto;
-}
-
-.layout {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-}
-
-.SideBar {
-    width: 27%;
-    background: linear-gradient(180deg, #3C3181 0%, #321F59 100%);
-    color: white;
-    padding: 20px;
-    border-top-right-radius: 80px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.navlinks {
-    list-style-type: none;
-    padding: 0;
-}
-
-.navlinks li {
-    margin-left: 40px;
-}
-
-.navlinks a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: large;
-}
-
-.nav-icon {
-    width: 50%;
-    height: auto;
-    margin-left: -30px;
-}
-
-.userinfo {
-    display: flex;
-    align-items: center;
-    margin-top: 120px;
-}
-
-.user-avatar {
-    width: 50%;
-    height: auto;
-}
-
-.userAcc {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
-
-.userAcc span {
-    margin-left: -27px;
-}
-
-/* Page main content */
-.main-content {
-    margin-left: 3%;
-    margin-top: 70px;
-    padding: 20px;
-    overflow-y: auto;
-    height: calc(100vh - 220px);
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.main-content::-webkit-scrollbar {
-    display: none;
-}
-
-.top-part {
-    position: fixed;
-    height: 150px;
-    top: 80px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #ffffff;
-    z-index: 10;
-    width: 100%;
-    padding: 10px;
-}
-
-.top-part h1 {
-    font-size: 36px;
-    color: #3C3181;
-    margin-bottom: 10px;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    outline: none;
-}
-
-.add-customer-btn {
-    display: inline-flex;
-    align-items: center;
-    background: linear-gradient(90deg, #3C3181 0%, #321F59 100%);
-    padding: 8px 20px;
-    border-radius: 5px;
-    color: white;
-    border: none;
-    margin-left: 310px;
-}
-
-.add-customer-btn:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.add-customer-btn img {
-    width: 25px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-/* Table */
-/* Tabs */
-
+/* customer list */
+/* tabs -member_regular */
 .tabs button {
     padding: 10px 20px;
     background-color: #ffffff;
@@ -366,6 +189,11 @@ body {
     flex-direction: column;
 }
 
+.customer-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* listing header*/
 .details-header {
     display: flex; 
     padding: 10px;
@@ -389,6 +217,7 @@ body {
 }
 
 
+/* cusomer details */
 .customer-box {
     padding: 20px;
     border: 1px solid #d6d5d5;
@@ -412,6 +241,7 @@ body {
     min-width: 150px;
     max-width: 200px; 
     flex:2;
+    margin-left: 10px;
 }
 
 .customer-contact,
@@ -421,6 +251,19 @@ body {
     min-width: 50px;
     max-width: 100px; 
     flex: 1.5;
+}
+
+.customer-contact {
+    margin-left: -15px;
+}
+.customer-start {
+    margin-left: 13px;
+}
+.customer-end {
+    margin-left: -25px;
+}
+.customer-days {
+    margin-left: -25px;
 }
 
 .edit-icon {
@@ -433,7 +276,7 @@ body {
     transform: translateY(2px);
 }
 
-/* addres-emergency section */
+/* address-emergency section */
 .details-row {
     display: flex; 
     justify-content: space-between; 
