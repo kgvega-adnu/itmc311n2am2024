@@ -12,7 +12,7 @@ body {
     background-color: #f4f4f9;
     height: 100vh;
     margin: 0;
-    
+    position: sticky;
 }
 
 /* Container holding both sections */
@@ -21,7 +21,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
     font-family: sans-serif;
@@ -113,34 +112,45 @@ body {
     text-decoration: none;
 }
 
-/* right side */
 
+/* right side */
 .welcome-section {
     width: 50%;
-    height: 100%;
+    height: 100vh; 
     position: relative;
-    background: url('../../public/images/rightPanel.png') no-repeat center center;
-    background-size: 300%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    width: 150vw; 
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
 }
 
 .welcome-message {
-    position: absolute;
+    position: relative;
     color: rgb(255, 255, 255);
     text-align: center;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2; 
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .welcome-message h3 {
     font-size: 30px;
     margin-bottom: -140px;
-    
 }
 
 .welcome-message p {
-    font-size: 15px;    
+    font-size: 15px;
     margin-top: -140px;
 }
 
@@ -150,7 +160,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Add fade-in animation */
+/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -158,9 +168,4 @@ body {
     to {
         opacity: 1;
     }
-}
-
-/* fade in fx */
-.welcome-message {
-    animation: fadeIn 1.5s ease-in-out forwards;
 }
