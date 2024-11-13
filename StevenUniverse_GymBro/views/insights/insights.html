@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBro - Insights</title>
+    <link rel="stylesheet" href="../../public/css/insights/insight-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="../../public/javascript/date-selector.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- logo -->
+        <div class="logo">
+            <img src="../../public/images/violet_logo.png" alt="GymBro_logo">
+        </div>
+        
+        <!-- main layout -->
+        <div class="layout">
+            <!-- sidebar -->
+            <nav class="SideBar">         
+                <ul class="navlinks">
+                    <li>
+                        <a href="../YourGym/urgym.html">
+                            <img src="../../public/images/urgym.png" alt="Your Gyms" class="nav-icon">
+                            Your Gyms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../bookmarks/bookmarks.html">
+                            <img src="../../public/images/bookmark.png" alt="Bookmarks" class="nav-icon">
+                            Bookmarks
+                        </a>
+                    </li>
+                    <li>
+                        <a href="insights.html">
+                            <img src="../../public/images/insight.png" alt="Insights" class="nav-icon">
+                            Insights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../customers/customers-page.html">
+                            <img src="../../public/images/customers.png" alt="Customers" class="nav-icon">
+                            Customers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../public/images/logout.png" alt="Logout" class="nav-icon">
+                            Logout
+                        </a>
+                    </li>
+                </ul>            
+
+                <div class="userinfo">
+                    <a href="profile.html" class="userAcc">
+                        <img src="../../public/images/useravatar.png" alt="User Profile" class="user-avatar">
+                        <span>Juan Dela Cruz</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- main content -->
+            <div class="main-content" id="mainContent">
+                <!-- top part of the main content -->
+                <div class="top-part">
+                    <h1>Insights</h1>
+                    <div class="search-bar">
+                        <img src="../../public/images/violet/loc-icon-violet.png" alt="loc-icon">
+                        <input type="text" placeholder="Select Gym or Branch">
+                    </div>
+                </div>
+                
+                <!-- filter -->
+                <div class="filters">
+                    <!-- date-record selector -->
+                    <div class="date-selector">
+                        <div class="date-btn-container">
+                            <button id="date-btn">This Week ▼</button>
+                            <div id="custom-date" style="display: none;" class="custom-date">
+                                <label>Start Date: <input type="date" id="start-date"></label>
+                                <label>End Date: <input type="date" id="end-date"></label>
+                            </div>
+                        </div>
+                        <div class="date-list" id="date-list" style="display: none;">
+                            <ul>
+                                <li>Today</li>
+                                <li>Yesterday</li>
+                                <li>This Week</li>
+                                <li>This Month</li>
+                                <li>This Year</li>
+                                <li>Custom</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Summary -->
+                <div class="summary">
+                    <h2>Summary</h2>
+                    <div class="summary-boxes">
+                        <div class="box-ttl-rec">
+                            <p>00</p>
+                            <span>Total Records</span>
+                        </div>
+                        <div class="box">
+                            <p class="total">00</p>
+                            <p>MM/DD/YY</p>
+                            <span>Busiest Day</span>
+                        </div>
+                        <div class="box">
+                            <p class="total">00</p>
+                            <p>5 PM</p>
+                            <span>Busiest Time of Day</span>
+                        </div>
+                        <div class="box">
+                            <p class="total">00</p>
+                            <p>Sat</p>
+                            <span>Busiest Day of the Week</span>
+                        </div>
+                    </div>
+                
+
+                    <!-- Number of records -->
+                    <div class="records-by-week">
+                        <h3>Number of records</h3>
+                        <div class="week-records">
+                            <div>
+                                <p>Sun</p>
+                                <div>00</div>
+                            </div>
+                            <div>
+                                <p>Mon</p>
+                                <div>00</div>
+                            </div>
+                            <div>
+                                <p>Tue</p>
+                                <div>00</div>
+                            </div>
+                            <div>
+                                <p>Wed</p>
+                                <div>00</div>
+                            </div>
+                            <div>
+                                <p>Thu</p>
+                                <div>00</div>
+                            </div>
+                            <div>
+                                <p>Fri</p>
+                                <div>00</div>
+                            </div>
+                            <div>
+                                <p>Sat</p>
+                                <div>00</div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <!-- Records by time -->
+                    <div class="records-by-time">
+                        <h3>Records by time</h3>
+                        <div id="chart-container">
+                            <!-- Placeholder for chart -->
+                            <canvas id="timeChart"></canvas>
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>            
+    </div>
+
+    <script>
+        // Chart.js script to create the line chart
+        const ctx = document.getElementById('timeChart').getContext('2d');
+        const timeChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'],
+                datasets: [{
+                    label: 'Gym Attendance',
+                    data: [10, 20, 30, 25, 40, 50, 60, 70, 65, 80, 90, 95, 100, 110, 120], // Sample data
+                    backgroundColor: 'rgba(60, 49, 129, 0.2)',
+                    borderColor: 'rgba(60, 49, 129, 1)',
+                    borderWidth: 2,
+                    fill: true
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Attendees'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time of Day'
+                        }
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBro - Your Gym</title>
+    <link rel="stylesheet" href="../../public/css/customers/add_customer.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../../public/images/violet_logo.png" alt="GymBro_logo">
+        </div>
+
+        <!-- sidebar -->
+        <div class="content-wrapper">
+            <nav class="SideBar">         
+                <ul class="navlinks">
+                    <li>
+                        <a href="../YourGym/urgym.html" >
+                            <img src="../../public/images/urgym.png" alt="Your Gyms" class="nav-icon">
+                            Your Gyms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../bookmarks/bookmarks.html">
+                            <img src="../../public/images/bookmark.png" alt="Bookmarks" class="nav-icon">
+                            Bookmarks
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../insights/insights.html">
+                            <img src="../../public/images/insight.png" alt="Insights" class="nav-icon">
+                            Insights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="customers-page.html">
+                            <img src="../../public/images/customers.png" alt="Customers" class="nav-icon">
+                            Customers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../public/images/logout.png" alt="Logout" class="nav-icon">
+                            Logout
+                        </a>
+                    </li>
+                </ul>            
+
+                <div class="userinfo">
+                    <a href="profile.html" class="userAcc">
+                        <img src="../../public/images/useravatar.png" alt="User Profile" class="user-avatar">
+                        <span>Juan Dela Cruz</span>
+                    </a>
+                </div>
+            </nav>
+
+
+
+            <!-- form for adding gym -->
+            <div class="main-content">
+                <button id="goBackButton">
+                    <img src="../../public/images/arrow-left.png" alt="Back Icon" class="button-icon">
+                    Back
+                </button>
+                <h1>Add New Customer</h1>
+                <form class="newCustomer-form">
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                    <input type="text" name="address" placeholder="Address" required>
+                    <input type="text" name="contactnumber" placeholder="Contact Number" required>
+                    <input type="text" name="emergencynumber" placeholder="Emergency Contact" required>
+                    
+                    <div class="membership-checkbox">
+                        <input type="checkbox" id="member" name="member">
+                        <label for="member">Membership</label>
+                    </div>
+
+                    <div class="membership-dates">
+                        <!-- Start Date -->
+                        <div class="date-wrapper">
+                            <label for="startDate">Start:</label>
+                            <input type="date" id="startDate" class="date-input" placeholder="Starting Date" required>
+                        </div>
+                        
+                        <!-- End Date -->
+                        <div class="date-wrapper">
+                            <label for="endDate">End:</label>
+                            <input type="date" id="endDate" class="date-input" placeholder="End Date" required>
+                        </div>
+                    </div>                
+
+                    <div class="button-container">
+                        <button type="submit"> Confirm </button>
+                        <button type="button" id="cancelButton">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../public/javascript/goBack.js"></script>
+</body>
+</html>

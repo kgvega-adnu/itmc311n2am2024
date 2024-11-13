@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBro - Customers</title>
+    <link rel="stylesheet" href="../../public/css/customers/customers_styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- logo -->
+        <div class="logo">
+            <img src="../../public/images/violet_logo.png" alt="GymBro_logo">
+        </div>
+        
+        <!-- main layout -->
+        <div class="layout">
+            <!-- sidebar -->
+            <nav class="SideBar">         
+                <ul class="navlinks">
+                    <li>
+                        <a href="../YourGym/urgym.html" class="active">
+                            <img src="../../public/images/urgym.png" alt="Your Gyms" class="nav-icon">
+                            Your Gyms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../bookmarks/bookmarks.html">
+                            <img src="../../public/images/bookmark.png" alt="Bookmarks" class="nav-icon">
+                            Bookmarks
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../insights/insights.html">
+                            <img src="../../public/images/insight.png" alt="Insights" class="nav-icon">
+                            Insights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="customers-page.html">
+                            <img src="../../public/images/customers.png" alt="Customers" class="nav-icon">
+                            Customers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../public/images/logout.png" alt="Logout" class="nav-icon">
+                            Logout
+                        </a>
+                    </li>
+                </ul>            
+
+                <div class="userinfo">
+                    <a href="profile.html" class="userAcc">
+                        <img src="../../public/images/useravatar.png" alt="User Profile" class="user-avatar">
+                        <span>Juan Dela Cruz</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- main content -->
+            <div class="main-content" id="mainContent">
+                <!-- top part of the main content -->
+                <div class="top-part">
+                    <h1>Customers</h1>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search here">
+                        <button class="add-customer-btn" id="addGymBtn" onclick="window.location.href='add-customer.html';">
+                            <img src="../../public/images/AddIcon.png" alt="add-icon"> 
+                            Add Customer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- tabs -->
+                <div class="tabs">
+                    <button>Member</button>
+                    <button>Regular</button>
+                </div>
+
+                <!-- customer list with fixed header -->
+                <div class="customer-container">
+
+                    <!-- header -->
+                    <div class="details-header">
+                        <div class="basic-details">
+                            <span class="name-header">Name</span>
+                            <span style="flex:1.5;">Contact Number</span>
+                            <span>Start</span>
+                            <span>End</span>
+                            <span>Days</span>
+                            <span></span> <!--space for the edit icon -->
+                        </div>
+                    </div>
+
+                    <!-- list -->
+                    <div class="customer-list">
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- add example customer here here  -->
+
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- example customer -->
+                        <div class="customer-box">
+                            <div class="basic-details">
+                                <span class="customer-name">Claire Johnson</span>
+                                <span class="customer-contact">0927723682</span>
+                                <span class="customer-start">7/01/2024</span>
+                                <span class="customer-end">7/31/2024</span>
+                                <span class="customer-days">0 Days</span>
+                                <img src="../../public/images/violet/editIcon-violet.png" alt="edit" class="edit-icon">
+                            </div>
+                            <div class="details-row">
+                                <div class="address-emergency">
+                                    <p>Address: <span id="address">5/F Dona Amparo Building, Espana Street, Sampaloc</span></p>
+                                    <p>Emergency Contact: <span id="emergencyContact">09277336143</span></p>
+                                </div>
+                                <div class="status">
+                                    <img src="../../public/images/violet/star-icon.png">
+                                    <span id="status">MEMBER</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- <script src="../../public/javascript/dynamicContent.js"></script> -->
+</body>
+</html>

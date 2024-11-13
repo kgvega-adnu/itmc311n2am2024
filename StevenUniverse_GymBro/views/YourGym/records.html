@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBro - Records Page</title>
+    <link rel="stylesheet" href="../../public/css/YourGym/records.css">
+    <script src="../../public/javascript/current-date.js" defer></script>
+    <script src="../../public/javascript/goBack.js"></script>
+    <script src="../../public/javascript/calendar.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- logo -->
+        <div class="logo">
+            <img src="../../public/images/violet_logo.png" alt="GymBro_logo">
+        </div>
+        
+        <!-- main layout -->
+        <div class="layout">
+            <!-- sidebar -->
+            <nav class="SideBar">         
+                <ul class="navlinks">
+                    <li>
+                        <a href="urgym.html">
+                            <img src="../../public/images/urgym.png" alt="Your Gyms" class="nav-icon">
+                            Your Gyms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../bookmarks/bookmarks.html">
+                            <img src="../../public/images/bookmark.png" alt="Bookmarks" class="nav-icon">
+                            Bookmarks
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../insights/insights.html">
+                            <img src="../../public/images/insight.png" alt="Insights" class="nav-icon">
+                            Insights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../customers/customers-page.html">
+                            <img src="../../public/images/customers.png" alt="Customers" class="nav-icon">
+                            Customers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../public/images/logout.png" alt="Logout" class="nav-icon">
+                            Logout
+                        </a>
+                    </li>
+                </ul>            
+
+                <div class="userinfo">
+                    <a href="profile.html" class="userAcc">
+                        <img src="../../public/images/useravatar.png" alt="User Profile" class="user-avatar">
+                        <span>Juan Dela Cruz</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- main content -->
+            <div class="main-content">
+                <button class="back-button" id="goBackButton">
+                    <img src="../../public/images/arrow-left.png" alt="">
+                    Back
+                </button>
+                <h1>Records Page</h1>
+
+                <!-- gym details box -->
+                <div class="gym-info-box">
+                    <span class="gym-name">Anytime Fitness</span>
+                    <div class="location">
+                        <img src="../../public/images/loc-icon.png" alt="Location Icon" class="location-icon"> 
+                        <span class="gym-location">Ayala Malls, Legazpi</span>
+                    </div>
+                </div>
+
+                <!-- search bar and selected date -->
+                <div class="search-date-container">
+                    <input type="text" placeholder="Search Name" class="search-bar">
+                    <!-- date recordera -->
+                    <div class="display-selected">
+                        <p class="selected"></p>
+                    </div>
+                </div>
+
+
+                <!-- tabs -->
+                <div class="tabs">
+                    <button class="tab">All</button>
+                    <button class="tab">Ongoing</button>
+                </div>
+
+                    <!-- record Header -->
+                <div class="record-header">
+                    <p></p> <!-- space for icons -->
+                    <p>Name</p>
+                    <p>Time In</p>
+                    <p>Time Out</p>
+                    <p></p> <!-- space for icons -->
+                </div>
+                <!-- records box -->
+                <div class="records-box">
+                <!-- sample Entry -->
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>John Doe</span>
+                        <span>08:00 AM</span>
+                        <span>10:00 AM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+                    <!-- add more entries here-->
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>Claire Johnson</span>
+                        <span>10:00 AM</span>
+                        <span>12:00 PM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>James Maderazo</span>
+                        <span>01:00 PM</span>
+                        <span>05:00 PM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>Joshua Sapusao</span>
+                        <span>01:00 PM</span>
+                        <span>05:00 PM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>Thommie Penaserada</span>
+                        <span>04:00 PM</span>
+                        <span>01:00 AM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>Mark Angelo Artana</span>
+                        <span>04:00 PM</span>
+                        <span>10:00 PM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>Alfonso Rabacal III</span>
+                        <span>04:00 PM</span>
+                        <span>04:15 PM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>Joerie Vincent Sto.Domingo</span>
+                        <span>05:00 PM</span>
+                        <span>10:00 PM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+                    <div class="record-entry">
+                        <span class="icons">
+                            <img src="../../public/images/violet/2lines-icon.png" alt="3lines-icon">
+                        </span>
+                        <span>Jules Miguel Barrientos</span>
+                        <span>06:00 PM</span>
+                        <span>10:00 PM</span>
+                        <div class="icons">
+                            <img src="../../public/images/violet/editIcon-violet.png" alt="Edit">
+                            <img src="../../public/images/violet/delete-icon.png" alt="Delete">
+                        </div>
+                    </div>
+
+
+
+                    <!-- end of sample entries -->
+                </div>    
+            </div>
+
+            <!-- right sidebar -->
+            <div class="right-sidebar">
+                <!-- date -->
+                <div class="rightside-header">
+                    <p>Today</p>
+                    <span id="current-date"></span>
+                </div>
+
+                
+                <!-- calendar -->
+                 
+                <div class="calendar-panel">
+                    <div class="calendar-header">
+                        <img src="../../public/images/mouse-icon.png" alt="mouse-icon">
+                        <h5>SELECT DATE</h5>
+                    </div>
+                    <div class="calendar">
+                        <header>
+                            <pre class="left">◀</pre>
+                            <div class="header-display">
+                                <p class="display"></p>
+                            </div>
+                            <pre class="right">▶</pre>
+                        </header>
+                        <div class="week">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days">
+                            <div class="calendar-day">1</div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day">7</div>
+                            
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day">13</div>
+                            <div class="calendar-day">14</div>
+                            
+                            <div class="calendar-day">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day">20</div>
+                            <div class="calendar-day">21</div>
+                            
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                            <div class="calendar-day">31</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- line to divide -->
+                <div class="line"></div>
+
+                <!-- create record form -->
+                <form class="record-form">
+                    <div class="add-record-header">
+                        <img src="../../public/images/add-record-icon.png" alt="add-record-icon">
+                        <h5>CREATE RECORD</h5>
+                    </div>
+                    <input type="text" id="full-name" placeholder="Enter Full Name">
+
+                    <label for="time-in">Time In:</label>
+                    <input type="time" id="time-in" placeholder="time-in">
+
+                    <label for="time-out">Time Out:</label>
+                    <input type="time" id="time-out">
+
+                    <div class="form-buttons">
+                        <button type="submit">
+                            <img src="../../public/images/check-icon.png" alt="">
+                            Confirm
+                        </button>
+                        <button type="button">Clear</button>
+                    </div>
+                </form>
+
+                <div class="add-customer-panel">
+                    <button class="add-new-customer">
+                        <img src="../../public/images/add-people-icon.png" alt="add-people-icon">
+                        Add New Customer
+                    </button>
+                    <img src="../../public/images/violet/expand-icon.png" alt="expand-icon">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
