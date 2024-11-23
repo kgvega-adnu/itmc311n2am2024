@@ -59,8 +59,7 @@ class Reports(models.Model):
     Reports_isCompleted = models.BooleanField(default=False)
     Reports_date = models.DateTimeField(default=timezone.now)
 
-    # Report Identification
-    Reports_authorId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reports')
+
 
 
 class Announcements(models.Model):
@@ -68,6 +67,3 @@ class Announcements(models.Model):
     Announce_header = models.CharField(max_length=100)
     Announce_body = models.TextField()
     Announce_date = models.DateTimeField(default=timezone.now)
-
-    # Report identification
-    Announce_authorId = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='announcements')
