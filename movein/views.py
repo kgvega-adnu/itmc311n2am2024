@@ -72,7 +72,6 @@ def l_room(request):
     return render(request, 'movein/l_roompage.html', context)
 
 
-@login_required(login_url='owner/login')
 def l_announcement(request):
     announcements = Announcements.objects.order_by('-Announce_date')
     
