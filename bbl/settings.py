@@ -142,3 +142,7 @@ USE_TZ = True
 # LOGIN_REDIRECT_URL = 'myRoom'
 
 AUTH_USER_MODEL = 'movein.User'
+
+if os.environ.get("VERCEL"):
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
