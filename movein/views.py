@@ -18,7 +18,10 @@ class LogoutView(BaseLogoutView):
 def index(request):
     return render(request, 'movein/index.html')
 
+################################################################################################################################################
 # Owner Views
+################################################################################################################################################
+
 def l_register(request):
     if request.method == "POST":
         form = ownerRegForm(request.POST)
@@ -71,7 +74,7 @@ def l_room(request):
 
     return render(request, 'movein/l_roompage.html', context)
 
-
+# @login_required(login_url='owner/login')
 def l_announcement(request):
     announcements = Announcements.objects.order_by('-Announce_date')
     
@@ -108,8 +111,9 @@ def l_reports(request):
     }
     return render(request, 'movein/l_reports.html', context)
 
-
+################################################################################################################################################
 # Tenant Views
+################################################################################################################################################
 
 @login_required(login_url='tenant/login')
 def t_myRoom(request):

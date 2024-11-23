@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-mxfrjj+re8-@2v+k*t!y1qa75kg(_f-)do6nyr)=$i_4^we)qy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'vercel.app']
 
 
 # Application definition
@@ -139,6 +139,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TIME_ZONE = 'Asia/Manila'
 USE_TZ = True
 
-LOGIN_REDIRECT_URL = 'myRoom'
+# LOGIN_REDIRECT_URL = 'myRoom'
 
 AUTH_USER_MODEL = 'movein.User'
