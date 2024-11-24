@@ -27,7 +27,7 @@ STORAGES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://moveinredeploy-production.up.railway.app',  # Add your production URL
+    'https://movein.up.railway.app',  
 ]
 
 
@@ -40,7 +40,7 @@ SECRET_KEY = 'django-insecure-mxfrjj+re8-@2v+k*t!y1qa75kg(_f-)do6nyr)=$i_4^we)qy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'moveinredeploy-production.up.railway.app']
+ALLOWED_HOSTS = ['*', 'movein.up.railway.app']
 
 
 # Application definition
