@@ -56,8 +56,9 @@ def l_login(request):
 
         if user is not None:
             if user.role == 'landlord':
-                login(request, user)    
-                return redirect('landlord_room')
+                login(request, user)
+                next_url = request.GET.get('next', 'landlord_room')
+                return redirect(next_url)
             else:
                 messages.error(request, "You do not have permission to access the landlord page.")
                 return redirect('landlord_login')
