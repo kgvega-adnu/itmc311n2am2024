@@ -44,3 +44,12 @@ class userRegForm (forms.ModelForm):
         if password and password_confirm and password != password_confirm:
             raise forms.ValidationError("Passwords do not match!")
         return cleaned_data
+    
+class roomForm(forms.ModelForm):
+    class Meta:
+        model = Room
+        fields = ['Room_image', 'Room_details']
+        widgets = {
+            'Room_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'Room_details': forms.Textarea(attrs={'class': 'form-control'}),
+        }

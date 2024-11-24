@@ -43,23 +43,36 @@ Additionally, the landlord can access tenant information for each room. -->
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <form method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
                                     <div class="input-group mb-3">
-                                        <input type="file" class="form-control" id="attachImageGroup">
-                                        <label class="input-group-text" for="attachImageGroup">Upload</label>
+                                        <label class="input-group-text" for="id_Room_image">Upload</label>
+                                        {{ form.Room_image }}
+                                        {% if form.Room_image.errors %}
+                                            <div class="text-danger">
+                                                {% for error in form.Room_image.errors %}
+                                                    <p>{{ error }}</p>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
                                     </div>
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="room-details" class="d-block" style="color: black;">Room Details:</label>
-                                            <textarea class="form-control" id="room-details"></textarea>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save Changes</button>
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="id_Room_details" class="form-label" style="color: black;">Room Details:</label>
+                                        {{ form.Room_details }}
+                                        {% if form.Room_details.errors %}
+                                            <div class="text-danger">
+                                                {% for error in form.Room_details.errors %}
+                                                    <p>{{ error }}</p>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </div>
+                                </form>
+                                
                             </div>
                         </div>
                     </div>

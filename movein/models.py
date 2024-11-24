@@ -46,10 +46,10 @@ class Room(models.Model):
     # Room information
     Room_isOccupied = models.BooleanField(default=False)
     Room_image = models.ImageField(upload_to='assets/rooms', default='assets/test1.png')
+    Room_details = models.TextField()
 
     # Room identification
     Room_Code = models.CharField(default=gen_code, editable=False, unique=True, max_length=8)
-    Room_propertyId = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='room')
 
 
 class Reports(models.Model):    
@@ -58,8 +58,6 @@ class Reports(models.Model):
     Reports_body = models.TextField()
     Reports_isCompleted = models.BooleanField(default=False)
     Reports_date = models.DateTimeField(default=timezone.now)
-
-
 
 
 class Announcements(models.Model):

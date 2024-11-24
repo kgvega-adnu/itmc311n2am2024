@@ -68,13 +68,26 @@ def l_login(request):
 
 @login_required(login_url='owner/login')
 def l_room(request):
+    room = Room.objects.all()
+
+    if request.method == "POST":
+        form = roomForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('landlord_room')
+    else:
+        form = roomForm()
+
     context = {
         'active_link': 'rooms',
+        'user': request.user,
+        'Room': room,
+        'form': form,
     }
 
     return render(request, 'movein/l_roompage.html', context)
 
-# @login_required(login_url='owner/login')
+@login_required(login_url='owner/login')
 def l_announcement(request):
     announcements = Announcements.objects.order_by('-Announce_date')
     
@@ -119,6 +132,7 @@ def l_reports(request):
 def t_myRoom(request):
     context = {
         'active_link': 'rooms',
+        'user': request.user,
     }
 
     return render(request, 'movein/t_myRoom.html', context)
@@ -142,6 +156,7 @@ def t_report(request):
     }
 
     return render(request, 'movein/t_reports.html', context)
+
 
 def t_login(request):
     error_message = None
