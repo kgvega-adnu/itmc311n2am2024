@@ -19,6 +19,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DATABASE_URL = "postgres://neondb_owner:CtGSl7gTya0w@ep-billowing-thunder-a1ljogif-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
 
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://moveinredeploy-production.up.railway.app',  # Add your production URL
+]
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -28,7 +40,7 @@ SECRET_KEY = 'django-insecure-mxfrjj+re8-@2v+k*t!y1qa75kg(_f-)do6nyr)=$i_4^we)qy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'vercel.app']
+ALLOWED_HOSTS = ['*', 'moveinredeploy-production.up.railway.app']
 
 
 # Application definition
@@ -139,10 +151,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TIME_ZONE = 'Asia/Manila'
 USE_TZ = True
 
-# LOGIN_REDIRECT_URL = 'myRoom'
+LOGIN_REDIRECT_URL = 'myRoom'
 
 AUTH_USER_MODEL = 'movein.User'
-
-if os.environ.get("VERCEL"):
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
