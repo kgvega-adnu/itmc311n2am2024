@@ -37,9 +37,8 @@ def l_register(request):
             user = form.save(commit=False)
             user.username = email  
             user.set_password(password)  
-            user.save()
-            login(request, user)  
-            return redirect('landlord_room')  
+            user.save()  
+            return redirect('landlord_login')  
 
     else:
         form = ownerRegForm()
@@ -194,7 +193,7 @@ def t_register(request):
             user.set_password(password)
             user.save()
             login(request, user)
-            return redirect('myRoom')
+            return redirect('tenant_login')
         
     else:
         form = userRegForm()

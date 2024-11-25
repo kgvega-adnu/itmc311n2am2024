@@ -15,6 +15,7 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
     email = models.EmailField(unique=True)
+    phonenumber = models.CharField(max_length=10, null=False)
 
     def save(self, *args, **kwargs):
         if not self.pk and not self.role:

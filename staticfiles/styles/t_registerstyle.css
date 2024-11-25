@@ -116,7 +116,7 @@ i {
     border-radius: 10px;
 }
 
-#floatingInput, #floatingPassword {
+.floatingInput, .floatingPassword {
     font-style: italic;
     font-size: 10px;
     padding: 10px;

@@ -36,13 +36,57 @@
                 </div>
                 <div class="col-md-5 right">
                     <div class="input-box">
-                        <h3>Create an Account</h3>
 
                         <!-- Register form -->
-                        <form method="POST" action="">
+                        <form method="POST">
                             {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit" class="btn btn-primary">Register</button>
+                            <div class="input-box">
+                                <h3>Create an Account</h3>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-floating mb-4">
+                                            <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="First Name"> -->
+                                            {{ form.first_name }}
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-4">
+                                            <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Last Name"> -->
+                                            {{ form.last_name }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="email" class="form-control-sm" id="floatingInput" placeholder="Email Address"> -->
+                                    {{ form.email }}
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Phone Number"> -->
+                                    {{ form.phonenumber }}
+                                    {{ form.phonenumber.errors }}
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="password" class="form-control-sm" id="floatingPassword" placeholder="Password"> -->
+                                    {{ form.password }}
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="password" class="form-control-sm" id="floatingPassword" placeholder="Re-enter password"> -->
+                                    {{ form.password_confirm }}
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Enter property code"> -->
+                                    <i>The property code will be given by the admins of our website.
+                                        <a class="link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                            href="#">
+                                            Contact us
+                                        </a>
+
+                                    </i>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                            <!-- <button type="submit" class="btn btn-primary">Register</button> -->
                         </form>
                         <!-- End of form -->
 
