@@ -8,6 +8,7 @@ from .form import *
 from django.contrib.auth.views import LogoutView as BaseLogoutView
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt 
+from . import models
 
 
 class LogoutView(BaseLogoutView):
@@ -68,7 +69,7 @@ def l_login(request):
 
 @login_required(login_url='owner/login')
 def l_room(request):
-    room = Room.objects.all()
+    rooms = Room.objects.all()
 
     if request.method == "POST":
         form = roomForm(request.POST, request.FILES)
@@ -81,7 +82,7 @@ def l_room(request):
     context = {
         'active_link': 'rooms',
         'user': request.user,
-        'Room': room,
+        'rooms': rooms,
         'form': form,
     }
 

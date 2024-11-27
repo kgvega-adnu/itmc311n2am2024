@@ -84,18 +84,27 @@ Additionally, the landlord can access tenant information for each room. -->
 <!--end of banner-->
 
 <!--content-->
-<div class="content">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-2 mb-3 d-flex justify-content-center">
-            <div class="room-container p-3 text-light">
-                <h1 class="display-5">Room 1</h1>
-                <p>G. Mariano</p>
+{% for room in rooms %}
+    
+    <div class="content">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-2 mb-3 d-flex justify-content-center">
+                <div class="room-container p-3 text-light">
+                    <h1 class="display-5">Room 1</h1>
+                    {% if room.Room_isOccupied %}
+                        <p>G. Mariano</p>
+                    {% else %}
+                        <p>Vacant</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-8 image-container">
+                <img src="{{ room.Room_image.url }}" class="img-fluid" alt="sample">
             </div>
         </div>
-        <div class="col-12 col-md-8 image-container">
-            <img src="{% static 'images/bedroom-1.png' %}" class="img-fluid" alt="sample">
-        </div>
     </div>
-</div>
+{% empty %}
+    <h1>No rooms added</h1>
+{% endfor %}
 <!--end of content-->
 {% endblock %}

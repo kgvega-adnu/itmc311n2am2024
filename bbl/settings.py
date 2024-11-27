@@ -140,9 +140,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -160,5 +157,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TIME_ZONE = 'Asia/Manila'
 USE_TZ = True
 
+REDIRECT_URL = ''
 
 AUTH_USER_MODEL = 'movein.User'

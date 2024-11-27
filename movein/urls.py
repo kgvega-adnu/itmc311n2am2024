@@ -7,10 +7,10 @@ from . import views
 
 urlpatterns = [
     path('', index, name="index"),
-    path('logout/', LogoutView.as_view(next_page='landlord_login'), name='landlord_logout'),
+    path('owner/logout/', LogoutView.as_view(next_page='landlord_login'), name='landlord_logout'),
     
     # OWNER URLS
-    path('owner/rooms', l_room, name="landlord_room"),
+    path('owner/rooms', views.l_room, name="landlord_room"),
     path('owner/announcements', l_announcement, name="landlord_announcement"),
     path('owner/bills', l_bills, name="landlord_bills"),
     path('owner/reports', l_reports, name="landlord_reports"),
@@ -22,7 +22,7 @@ urlpatterns = [
     path('tenant/announcements', t_announcement, name="tenant_announcement"),
     path('tenant/login', t_login, name="tenant_login"),
     path('tenant/register', t_register, name="tenant_register"),
-    path('tenant/logout/', views.tenant_logout, name='tenant_logout'),
+    path('tenant/logout/', LogoutView.as_view(next_page='tenant_login'), name='tenant_logout'),
     path('tenant/reports', t_report, name="tenant_reports"),
     
 
