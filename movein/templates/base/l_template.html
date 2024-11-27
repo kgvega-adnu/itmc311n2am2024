@@ -20,7 +20,7 @@
     <!--css-->
     <link rel="stylesheet" href="{% static 'styles/navstyle.css' %}">
     {% block styles %}
-        
+
     {% endblock %}
 
 </head>
@@ -60,7 +60,18 @@
                     </li>
                 </ul>
 
-                <a class="icon-link" href="#">
+                <!-- <a class="icon-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft"
+                    aria-controls="offcanvasLeft">
+                    <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" style="color: #ffffff;" width="40"
+                        height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                </a> -->
+
+                <!-- Your Link Icon -->
+                <a href="#" class="icon-link" id="profilePopover" data-bs-toggle="popover" data-bs-placement="bottom">
                     <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" style="color: #ffffff;" width="40"
                         height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -91,6 +102,31 @@
     {% block content %}
     {% endblock %}
 
+    <!-- offcanvas for profile -->
+    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLeftLabel">My Profile</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <img src="{% static 'images/woman-profile.png' %}" alt="profile-img">
+
+            <div class="container container-profile">
+                <a class="evas" href="#">EDIT</a>
+                <div class="profile-deets">
+                    <div class="deets">Full Name</div>
+                    <br>
+                    <div class="deets">E-mail</div>
+                    <br>
+                    <div class="deets">Phone Number</div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- end of profile offcanvas -->
+
     <!--popper and js-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -98,7 +134,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-    
+
+
+    <!-- JavaScript to initialize custom popover -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const profilePopover = new bootstrap.Popover(document.getElementById('profilePopover'), {
+                html: true,
+                content: `
+                    <div class="popover-header">
+                        <span>My Profile</span>
+                    </div>
+                    <div class="popover-body">
+                        <img src="https://via.placeholder.com/80" alt="Profile Picture">
+                        <div class="container container-profile">
+                            <a class="evas" href="#">EDIT</a>
+                            <div class="profile-deets">
+                                <div class="deets">Full Name</div>
+                                <div class="deets">E-mail</div>
+                                <div class="deets">Phone Number</div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            });
+        });
+    </script>
+
     <!-- sweetalert -->
     <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -158,6 +220,8 @@
             });
         });
     </script>
+
+
 
 </body>
 

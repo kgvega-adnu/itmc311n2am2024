@@ -49,16 +49,23 @@
     position: relative;
 }
 
+.icon-sm {
+    padding: 0px;
+    margin-top: 10px;
+    color: #F7EDE1; 
+    width: 15px;
+    height: 15px;
+}
 
 #logo {
     width: 35px;
     position: absolute;
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-top: 33px;
+    margin-left: 15px;
 }
 
 #sample {
-    margin-top: 150px;
+    margin-top: 115px;
     margin-left: 10px;
     width: 500px;
     height: 400px;
@@ -68,7 +75,7 @@
     position: absolute;
     top: 30%;
     left: 37%;
-    transform: translate(-40%, -70%);
+    transform: translate(-38%, -70%);
 }
 
 .text p {
@@ -81,7 +88,6 @@
     width: 250px;
     height: 550px;
     box-sizing: border-box;
-    
 }
 
 .input-box h3 {
@@ -92,11 +98,29 @@
 }
 
 .form-floating {
-    
     display: flex;
     position: relative;
     flex-direction: column;
-    
+    width: 100%;
+}
+
+#pnumber {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: rgb(230, 217, 217);
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+#pnumber .form-control-sm {
+    border: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-radius: 10px;
+    align-items: center;
 }
 
 .form-control-sm {
@@ -104,7 +128,31 @@
     border: none;
     border-radius: 10px;
     align-items: center;
+    width: 100%;
 }
+
+.input-group {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group .input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(179, 159, 179);
+}
+
+.input-group .form-control {
+    flex: 1;
+    width: 100%;
+}
+
 
 i {
     color: rgb(184, 179, 179);

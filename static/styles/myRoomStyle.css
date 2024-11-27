@@ -64,5 +64,6 @@ body {
 }
 
 #gif {
-    padding: 30px;
+    margin: 0;
+    padding: 20px;
 }

@@ -28,6 +28,13 @@
             <!-- split the content into two columns -->
             <div class="row" id="row">
                 <div class="col-md-7 side-image">
+                    <a class="icon-link" href="#">
+                        <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                        </svg>
+                    </a>
                     <img id="logo" src="{% static 'images/logo-white.png' %}" alt="move-in-logo">
                     <div class="text">
                         <p>Handle your second home <br> responsiblities with Move In!</p>
@@ -59,11 +66,13 @@
                                     <!-- <input type="email" class="form-control-sm" id="floatingInput" placeholder="Email Address"> -->
                                     {{ form.email }}
                                 </div>
-                                <div class="form-floating mb-4">
-                                    <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Phone Number"> -->
-
-                                    {{ form.phonenumber }}
-                                    {{ form.phonenumber.errors }}
+                                <div class="input-group mb-4">
+                                    <span class="input-group-text">+63</span>
+                                    <div class="form-floating flex-fill" id="pnumber">
+                                        <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Phone Number"> -->
+                                        {{ form.phonenumber }}
+                                        <!-- {{ form.phonenumber.errors }} -->
+                                    </div>
                                 </div>
                                 <div class="form-floating mb-4">
                                     <!-- <input type="password" class="form-control-sm" id="floatingPassword" placeholder="Password"> -->
@@ -75,7 +84,7 @@
                                 </div>
                                 <div class="form-floating mb-4">
                                     <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Enter property code"> -->
-                                    <i>The property code will be given by the admins of our website.
+                                    <i>The voucher code will be given by the admins of our website.
                                         <a class="link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
                                             href="#">
                                             Contact us
