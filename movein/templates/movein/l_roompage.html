@@ -49,30 +49,32 @@ Additionally, the landlord can access tenant information for each room. -->
                                         <label class="input-group-text" for="id_Room_image">Upload</label>
                                         {{ form.Room_image }}
                                         {% if form.Room_image.errors %}
-                                            <div class="text-danger">
-                                                {% for error in form.Room_image.errors %}
-                                                    <p>{{ error }}</p>
-                                                {% endfor %}
-                                            </div>
+                                        <div class="text-danger">
+                                            {% for error in form.Room_image.errors %}
+                                            <p>{{ error }}</p>
+                                            {% endfor %}
+                                        </div>
                                         {% endif %}
                                     </div>
                                     <div class="mb-3">
-                                        <label for="id_Room_details" class="form-label" style="color: black;">Room Details:</label>
+                                        <label for="id_Room_details" class="form-label" style="color: black;">Room
+                                            Details:</label>
                                         {{ form.Room_details }}
                                         {% if form.Room_details.errors %}
-                                            <div class="text-danger">
-                                                {% for error in form.Room_details.errors %}
-                                                    <p>{{ error }}</p>
-                                                {% endfor %}
-                                            </div>
+                                        <div class="text-danger">
+                                            {% for error in form.Room_details.errors %}
+                                            <p>{{ error }}</p>
+                                            {% endfor %}
+                                        </div>
                                         {% endif %}
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Save Changes</button>
                                     </div>
                                 </form>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -85,26 +87,46 @@ Additionally, the landlord can access tenant information for each room. -->
 
 <!--content-->
 {% for room in rooms %}
-    
-    <div class="content">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-2 mb-3 d-flex justify-content-center">
-                <div class="room-container p-3 text-light">
-                    <h1 class="display-5">Room 1</h1>
+
+<div class="content">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-2 mb-3 d-flex justify-content-center">
+            <div class="room-container p-3 text-light">
+                <h1 class="display-5">Room 1</h1>
+                <div class="roomstate">
                     {% if room.Room_isOccupied %}
                         <p>G. Mariano</p>
                     {% else %}
-                        <p>Vacant</p>
+                        <p class="villagertech">Vacant</p>
+                        <p>
+                            6969A420 <img class="pigstate" fill="currentColor" src="{% static 'images/copy2cb.png' %}" width="15" height="15">
+                        </p>
                     {% endif %}
                 </div>
-            </div>
-            <div class="col-12 col-md-8 image-container">
-                <img src="{{ room.Room_image.url }}" class="img-fluid" alt="sample">
+                
             </div>
         </div>
+        <div class="col-12 col-md-8 image-container position-relative">
+            <div class="edit-box position-absolute">
+                <a href="#" title="Edit">
+                    <img class="herobrine" src="{% static 'images/edit.png' %}" alt="Edit" class="edit-icon">
+                </a>
+            </div>
+            <div class="del-box position-absolute">
+                <a href="#" title="Delete">
+                    <img class="skeletonState" src="{% static 'images/delete.png' %}" alt="Delete" class="delete-icon">
+                </a>
+            </div>
+            <img class="creeper" src="{{ room.Room_image.url }}" class="img-fluid" alt="sample">
+        </div>
+        
+        
+        
+        
     </div>
+</div>
 {% empty %}
-    <h1>No rooms added</h1>
+<h1>No rooms added</h1>
 {% endfor %}
 <!--end of content-->
 {% endblock %}
