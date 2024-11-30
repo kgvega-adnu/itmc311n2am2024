@@ -37,3 +37,125 @@ hr {
 .swal2-actions button {
     margin: 0 8px;
 }
+
+label[for="room-details"] {
+    text-align: start;
+}
+
+
+/* for profile card tooltip */
+
+.card__article {
+    position: relative;
+}
+
+.card__profile {
+    position: relative;
+}
+
+.card__tooltip {
+    position: absolute;
+    top: 50px;
+    left: -20rem;
+    padding-bottom: 5rem;
+    width: 400px;
+    transition: opacity .4s, top .4s cubic-bezier(.6, -.5, .3, 1.5);
+	pointer-events: none;
+	opacity: 0;
+    z-index: 100;
+} 
+
+.card__content {
+    position: relative;
+    background-color: #8e7cc3;
+    box-shadow: 0 16px 32px hsla(230, 50%, 20%, .1);
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.card__content::after {
+	content: '';
+	width: 32px;
+	height: 32px;
+	background-color: #8e7cc3;
+	position: absolute;
+	left: 16.9rem;
+	right: 0;
+	bottom: 32.6rem;
+	margin-inline: auto;
+	border-radius: .25rem;
+	rotate: 45deg;
+}
+
+.card__header {
+	display: flex;
+	align-items: center;
+    text-align: center;
+    margin-left: 110px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+.card__header span {
+	color: var(--title-color);
+	font-weight: 500;
+}
+
+.card__image {
+    margin-left: 90px;
+}
+
+.card__edit img{
+    width: 20px;
+    height: 20px;
+    background-color: #8e7cc3;
+    top: 14.1rem;
+    right: 10rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.container-profile {
+    background-color: #ECF0F1;
+    color: black;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 10px; 
+}
+
+.edit {
+    position: absolute;
+    top: 310px;
+    right: 40px;
+    font-weight: bold;
+    color: #4e4187;
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.profile-deets {
+    text-align: left;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.deets::after {
+    content: "";
+    height: 2px;
+    background-color: black;
+    display: block;
+}
+
+/* show tooltip card */
+
+.card__article .card__tooltip.tooltip-visible {
+    opacity: 1;
+    pointer-events: initial;
+    top: 50px;
+}
+
+/* end of profile card tooltip */

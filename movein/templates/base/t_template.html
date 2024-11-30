@@ -55,14 +55,58 @@
                     </li>
                 </ul>
 
-                <a class="icon-link" href="#">
-                    <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" style="color: #ffffff;" width="40"
-                        height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path fill-rule="evenodd"
-                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                    </svg>
-                </a>
+                <!-- profile card tooltip -->
+                <article class="card__article">
+                    <div class="card__profile">
+                        <!-- profile icon -->
+                        <a href="#" class="icon-link">
+                            <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" style="color: #ffffff;" width="40"
+                                height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- card tooltip section -->
+                    <div class="card__tooltip">
+                        <div class="card__content">
+                            <header class="card__header">
+                                <span>My Profile</span>
+                            </header>
+
+                            <div class="card__data">
+                                <div class="card__image">
+                                    <div class="card__mask">
+                                        <img src="{% static 'images/woman-profile.png' %}" alt="profile_image">
+                                    </div>
+                                </div>
+
+                                <span class="card__edit">
+                                    <a class="edit__card"href="#">
+                                        <img src="{% static 'images/edit-image.png' %}" alt="edit">
+                                    </a>
+                                </span>
+                            </div>
+
+                            <div class="container container-profile">
+                                <a class="edit" href="#">EDIT</a>
+
+                                <div class="profile-deets">
+                                    <div class="deets">Full Name</div>
+                                    <br>
+                                    <div class="deets">E-mail</div>
+                                    <br>
+                                    <div class="deets">Phone Number</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card tooltip section -->
+                </article>
+
+                <!-- end of profile card tooltip -->
 
                 <div class="vr d-none d-lg-flex h-500 mx-lg-4 text-white"></div>
                 <hr class="d-lg-none text-white-100">
@@ -93,6 +137,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    
+    <!-- js for profile card tooltip -->
+    <script>
+        const iconLink = document.querySelector('.icon-link');
+        const tooltip = document.querySelector('.card__tooltip');
+
+        iconLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            tooltip.classList.toggle('tooltip-visible');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!iconLink.contains(e.target) && !tooltip.contains(e.target)) {
+                tooltip.classList.remove('tooltip-visible');
+            }
+        });
+    </script>
+    <!-- end of js for profile card tooltip -->
 
 
     <!-- sweetalert -->
