@@ -118,7 +118,7 @@ def l_bills(request):
 
 @login_required(login_url='owner/login')
 def l_reports(request):
-    reports = Reports.objects.all() 
+    reports = Reports.objects.order_by('-Reports_date')
     context = {
         'active_link': 'reports',
         'reports': reports
@@ -150,10 +150,20 @@ def t_announcement(request):
 
 @login_required(login_url='tenant/login')
 def t_report(request):
-    reports = Reports.objects.order_by('Reports_date')
+    reports = Reports.objects.order_by('-Reports_date')
+
+    if request.method == "POST":
+        form = reportForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('tenant_reports')
+    else:
+        form = reportForm()
+
     context = {
         'active_link': 'reports',
         'reports': reports,
+        'form': form
     }
 
     return render(request, 'movein/t_reports.html', context)

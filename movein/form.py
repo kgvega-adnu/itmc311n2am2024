@@ -11,6 +11,15 @@ class announcementForm(forms.ModelForm):
             'Announce_body': forms.Textarea(attrs={'class': 'form-control w-100', 'rows': 5}),  
         }
 
+class reportForm(forms.ModelForm):
+    class Meta:
+        model = Reports
+        fields = ['Reports_header', 'Reports_body']
+        widgets = {
+            'Reports_header': forms.TextInput(attrs={'class': 'form-control w-75 form-control-lg'}),
+            'Reports_body': forms.Textarea(attrs={'class': 'form-control w-100', 'rows': 5}),  
+        }
+
 class ownerRegForm (forms.ModelForm):
     password = forms.CharField(
         widget= forms.PasswordInput(attrs={

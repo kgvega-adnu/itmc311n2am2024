@@ -28,7 +28,7 @@ Announcement
                             <!-- Modal Header with custom color -->
                             <div class="modal-header"
                                 style="background-color: #4E4187; color: white; border-top-left-radius: 0.3rem; border-top-right-radius: 0.3rem;">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Announcement</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Report</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body p-4">
@@ -36,13 +36,11 @@ Announcement
                                     {% csrf_token %}
                                     <div class="mb-3">
                                         <label for="announce-header" class="form-label" style="color:black;">Header</label>
-                                        <input type="text" class="form-control" id="announce-header" name="announce-header" 
-                                               placeholder="Enter report header" required>
+                                        {{ form.Reports_header }}
                                     </div>
                                     <div class="mb-3">
                                         <label for="announce-body" class="form-label" style="color:black;">Body</label>
-                                        <textarea class="form-control" id="announce-body" name="announce-body" 
-                                                  rows="4" placeholder="Enter report body" required></textarea>
+                                        {{ form.Reports_body }}
                                     </div>
                                     <div class="modal-footer d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -71,12 +69,12 @@ Announcement
                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false"
                     aria-controls="collapse{{ forloop.counter }}">
-                    <strong>{{ report.Report_header }}</strong>
+                    <strong>{{ report.Reports_header }}</strong>
                 </button>
             </h2>
             <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    {{ report.Report_body }}
+                    {{ report.Reports_body }}
 
                     <div class="button-container">
                         <button type="button" class="btn custom-edit me-2">Edit</button>
