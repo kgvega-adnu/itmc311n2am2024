@@ -1,0 +1,57 @@
+{% extends 'base/l_template.html' %}
+{% load static %}
+
+{% block title %}
+Announcement
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'styles/l_reportstyle.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Banner -->
+<section class="main-container">
+    <article class="banner">
+        <div class="container-fluid">
+            <div class="container text-light p-5">
+                <h1 class="display-4">Reports</h1>
+            </div>
+        </div>
+    </article>
+</section>
+<!-- End of banner -->
+
+<!-- Content -->
+<div class="content">
+    <div class="accordion" id="accordionExample">
+        {% if reports %}
+            {% for report in reports %}
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false"
+                            aria-controls="collapse{{ forloop.counter }}">
+                        <strong>{{ report.Reports_header }}</strong>
+                    </button>
+                </h2>
+                <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        {{ report.Reports_body }}
+                    </div>
+                    <div class="Author">
+                        {{ report.Reports_author }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info">No reports available.</div>
+        {% endif %}
+    </div>
+</div>
+<!-- End of content -->
+
+{% endblock %}

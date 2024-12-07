@@ -1,0 +1,132 @@
+<!-- [MOVE-54] Room Page (Landlord) -->
+<!-- This page allows the Landlord to view all the rooms in the apartment
+and filter them by vacancy status—whether they are occupied or available.
+Additionally, the landlord can access tenant information for each room. -->
+
+{% extends 'base/l_template.html'%}
+{% load static %}
+
+{% block title %}Rooms{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'styles/roomstyle.css' %}">
+{% endblock %}
+
+{% block content %}
+<!--Banner-->
+<section class="main-container">
+    <article class="banner">
+        <div class="container-fluid">
+            <div class="container text-light p-5">
+                <h1 class="display-4">Rooms</h1>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" aria-current="page" href="#" style="color: #F8E71C;">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #7E7979">Vacant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #7E7979">Occupied</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@room">Add a Room</button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="background-color: #F7EDE1;">
+                                <div class="modal-header" style="background-color: #4E4187;">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add a Room</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="close"></button>
+                                </div>
+                                <form method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="id_Room_image">Upload</label>
+                                        {{ form.Room_image }}
+                                        {% if form.Room_image.errors %}
+                                        <div class="text-danger">
+                                            {% for error in form.Room_image.errors %}
+                                            <p>{{ error }}</p>
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="id_Room_details" class="form-label" style="color: black;">Room
+                                            Details:</label>
+                                        {{ form.Room_details }}
+                                        {% if form.Room_details.errors %}
+                                        <div class="text-danger">
+                                            {% for error in form.Room_details.errors %}
+                                            <p>{{ error }}</p>
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+<!--end of banner-->
+
+<!--content-->
+{% for room in rooms %}
+
+<div class="content">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-2 mb-3 d-flex justify-content-center">
+            <div class="room-container p-3 text-light">
+                <h1 class="display-5">Room 1</h1>
+                <div class="roomstate">
+                    {% if room.Room_isOccupied %}
+                        <p>G. Mariano</p>
+                    {% else %}
+                        <p class="villagertech">Vacant</p>
+                        <p>
+                            6969A420 <img class="pigstate" fill="currentColor" src="{% static 'images/copy2cb.png' %}" width="15" height="15">
+                        </p>
+                    {% endif %}
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-12 col-md-8 image-container position-relative">
+            <div class="edit-box position-absolute">
+                <a href="#" title="Edit">
+                    <img class="herobrine" src="{% static 'images/edit.png' %}" alt="Edit" class="edit-icon">
+                </a>
+            </div>
+            <div class="del-box position-absolute">
+                <a href="#" title="Delete">
+                    <img class="skeletonState" src="{% static 'images/delete.png' %}" alt="Delete" class="delete-icon">
+                </a>
+            </div>
+            <img class="creeper" src="{{ room.Room_image.url }}" class="img-fluid" alt="sample">
+        </div>
+        
+        
+        
+        
+    </div>
+</div>
+{% empty %}
+<h1>No rooms added</h1>
+{% endfor %}
+<!--end of content-->
+{% endblock %}

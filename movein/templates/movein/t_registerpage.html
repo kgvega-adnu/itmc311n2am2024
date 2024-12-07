@@ -1,0 +1,119 @@
+<!-- [MOVE-25] Register Page (Tenant) -->
+<!-- This page allows the tenants to register and create a fresh account. -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenant Registration Page</title>
+
+    <!--bootstrap links-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'styles/t_registerstyle.css' %}">
+    <link rel="icon" href="{% static 'images/logo-purple.png' %}">
+
+</head>
+
+<body>
+    <!--wrap the whole content with wrapper class-->
+    <div class="wrapper">
+        <div class="container main">
+            <!-- split the content into two columns -->
+            <div class="row" id="row">
+                <div class="col-md-7 side-image">
+                    <a class="icon-link" href="{% url 'tenant_login' %}">
+                        <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                        </svg>
+                    </a>
+                    <img id="logo" src="{% static 'images/logo-white.png' %}" alt="move-in-logo">
+                    <div class="text">
+                        <p>Handle your second home <br> responsiblities with Move In!</p>
+                    </div>
+                    <img id="sample" src="{% static 'images/signup-img.png' %}" alt="sample-image">
+                </div>
+                <div class="col-md-5 right">
+                    <div class="input-box">
+                        <!-- Register Form -->
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="input-box">
+                                <h3>Create an Account</h3>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-floating mb-4">
+                                            <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="First Name"> -->
+                                            {{ form.first_name }}
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-4">
+                                            <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Last Name"> -->
+                                            {{ form.last_name }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="email" class="form-control-sm" id="floatingInput" placeholder="Email Address"> -->
+                                    {{ form.email }}
+                                </div>
+                                <div class="input-group mb-4">
+                                    <span class="input-group-text">+63</span>
+                                    <div class="form-floating flex-fill" id="pnumber">
+                                        <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Phone Number"> -->
+                                        {{ form.phonenumber }}
+                                        <!-- {{ form.phonenumber.errors }} -->
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="password" class="form-control-sm" id="floatingPassword" placeholder="Password"> -->
+                                    {{ form.password }}
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="password" class="form-control-sm" id="floatingPassword" placeholder="Re-enter password"> -->
+                                    {{ form.password_confirm }}
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <!-- <input type="text" class="form-control-sm" id="floatingInput" placeholder="Enter property code"> -->
+                                    <i>The voucher code will be given by the admins of our website.
+                                        <a class="link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                                            href="#">
+                                            Contact us
+                                        </a>
+
+                                    </i>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                            <!-- <button type="submit" class="btn btn-primary">Register</button> -->
+                        </form>
+                        <!-- end form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--popper and js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
